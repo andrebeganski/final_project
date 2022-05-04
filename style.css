@@ -1,0 +1,363 @@
+/*
+This is a good layout for a mobile-first CSS template.
+Following this flow will minimize the number of styles you need to write and will ensure you are thinking, designing and developing mobile-first.
+Most of your styles get written like standard CSS, but for your mobile presentation. Generally speaking, a good mobile presention will stretch out nicely for larger screens.
+
+Sometimes, when we stretch out to larger screens, we need to make minor tweaks for the larger devices -- you can make these tweaks in the tablet media query, or if the issue exists on desktop only, the desktop media query.
+You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
+*/
+
+
+/* THIS LINE LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES */
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+
+/* Start your base/mobile styles here */
+
+#container2{
+    background-color: azure;
+    border-radius: 2.5%;
+    width: 95%;
+}
+
+b{
+    color: red;
+}
+
+body{
+    background-color: black;
+}
+
+h1{
+    font-family: 'Noto Serif', serif;
+    color:azure;
+    padding-bottom: none;
+}
+
+h3{
+    color:azure;
+}
+
+p {
+    line-height: 1.2em;
+    font-family: 'Noto Serif', serif;
+    color:azure
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.caption,
+figcaption {
+    font-size: 0.9rem;
+    color    : #8e8a8a;
+    padding  : 5px 0;
+}
+
+figure,
+img {
+    /* Sets image width to match parent */
+    width  : 100%;
+    display: block;
+    margin : 0 auto;
+}
+
+html,
+body {
+    /* Sets default font-size to 16px, ensuring 1em = 16px; */
+    font-size: 16px;
+}
+
+.headline{
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+#main_picture {
+    display: block;
+    width: 100%;
+    border-radius: 2.5%;
+}
+
+div > img {
+    border: azure;
+    border-width: .1em;
+    border-style: solid;
+    border-radius: 2.5%;
+}
+
+select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    width: auto;
+    margin-bottom: 10px;
+}
+
+#category{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#category > div{
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+}
+
+#category1{
+    display: block
+}
+
+#category1 > div{
+    flex-basis: calc(50% - 10px);
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+    margin-bottom: 2em;
+}
+
+.item{
+    display: none;
+}
+
+.item.active{
+    display: block;
+}
+
+.item1{
+    display: none;
+}
+
+.item1.active{
+    display: block;
+}
+
+.filter{
+    margin-bottom: 2em;
+    margin: 0 auto;
+    display: block;
+    width: auto;
+}
+
+.filter1{
+    margin-bottom: 2em;
+    margin: 0 auto;
+    display: block;
+    width: auto;
+}
+
+iframe{
+    width: 100%;
+}
+
+.dot{
+    width: 25px;
+    height: 25px;
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.dot .inner,
+.dot .close{
+    display: none;
+}
+
+.annotate .dot {
+    width: 25px;
+    height: 25px;
+    border: 2px solid #FFF;
+    border-radius: 50%;
+    position: absolute;
+    overflow: hidden;
+    color: #FFF;
+}
+
+.annotate .dot .inner {
+    position: absolute;
+    opacity: 0;
+    color: #FFF;
+    padding: 25px;
+    width: 100%;
+    top: 60%;
+    transform: translateY(-50%);
+}
+
+.annotate .dot .inner > h3, p {
+    background-color: black;
+    padding: 1em;
+    opacity: 75%;
+}
+
+.annotate .dot .inner > h3 {
+    width: fit-content;
+    text-align: center;
+    margin: auto;
+}
+
+.annotate .dot .close {
+    color: #FFF;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2em;
+    text-decoration: none;
+    opacity: 0;
+}
+
+.pink{
+    background-color: rgba(240, 161, 175, 0.65);
+}
+
+.green{
+    background-color: rgba(50, 205, 50, 0.5);
+}
+
+.purple{
+    background-color: rgba(175, 40, 240, 0.5);
+}
+
+.red{
+    background-color: rgba(205, 40, 40, 0.5);
+}
+
+.blue{
+    background-color: rgba(40, 40, 205, 0.5);
+}
+
+.pink1{
+    background-color: rgba(240, 161, 175, 0.65);
+}
+
+.green1{
+    background-color: rgba(50, 205, 50, 0.5);
+}
+
+.purple1{
+    background-color: rgba(175, 40, 240, 0.5);
+}
+
+.red1{
+    background-color: rgba(205, 40, 40, 0.5);
+}
+
+.blue1{
+    background-color: rgba(40, 40, 205, 0.5);
+}
+
+.annotate{
+    position: relative;
+}
+
+#background:not(.active){
+    top: 52%;
+    left: 57.5%;
+}
+
+#office:not(.active){
+    top: 40%;
+    left: 80%;
+}
+
+#wfh:not(.active){
+    top: 37.5%;
+    left: 60%;
+}
+
+#mobility:not(.active){
+    top: 72.5%;
+    left: 43%;
+}
+
+#bias:not(.active){
+    top: 39.5%;
+    left: 26%;
+}
+
+#stigma1:not(.active){
+    top: 60%;
+    left: 52.5%;
+}
+
+#bias1:not(.active){
+    top: 45.5%;
+    left: 80%;
+}
+
+#perception1:not(.active){
+    top: 12.5%;
+    left: 28%;
+}
+
+#background1:not(.active){
+    top: 77.5%;
+    left: 38%;
+}
+
+#atire1:not(.active){
+    top: 29.5%;
+    left: 22%;
+}
+
+.dot.active{
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    top: -7.75%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.annotate .dot.active {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 2.5%;
+    border: 0;
+    z-index: 2;
+}
+
+.annotate .dot.active .inner,
+.annotate .dot.active .close {
+    opacity: 1;
+    transition: opacity .5s ease-in-out;
+}
+
+.dot.active .inner,
+.dot.active .close{
+    display: block;
+}
+
+figcaption{
+    text-align: center;
+}
+
+iframe{
+    background-color: #FFF;
+    padding: 1em;
+    border-radius: 2.5%;
+}
+
+/* Tablet/Desktop overrides */
+
+@media(min-width: 681px) {
+
+}
+
+@media(min-width: 729px) {
+    /* Any adjustments for desktop and larger go here. Note these styles will be applied to anything 729px or larger -- so desktop */
+}
